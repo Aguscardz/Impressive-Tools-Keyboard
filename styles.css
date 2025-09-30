@@ -1,0 +1,91 @@
+/* Estilos generales */
+body {
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    min-width: 350px;
+}
+
+/* Caja de texto */
+.display {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #fafafa;
+    outline: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+    cursor: text;
+    position: relative;
+}
+
+/* Cursor visual */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    background: #1976d2;
+    vertical-align: bottom;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Teclado virtual */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.key {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 16px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    min-width: 38px;
+}
+
+.key:active, .key.pressed {
+    background: #bdbdbd;
+}
+
+.key.special {
+    background: #90caf9;
+    color: #0d47a1;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.key.pressed {
+    background: #1976d2 !important;
+    color: #fff !important;
+}
